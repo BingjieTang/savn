@@ -41,7 +41,7 @@ def parse_arguments():
     parser.add_argument(
         "--workers",
         type=int,
-        default=4,
+        default=1,
         metavar="W",
         help="how many training processes to use (default: 4)",
     )
@@ -253,6 +253,7 @@ def parse_arguments():
         default=0.25,
         help="The dropout ratio to use (default is no dropout).",
     )
+    
     parser.add_argument(
         "--scene_types",
         nargs="+",

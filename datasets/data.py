@@ -18,7 +18,6 @@ def num_to_name(num):
 
 
 def get_data(scene_types, scenes):
-
     mapping = ["kitchen", "living_room", "bedroom", "bathroom"]
     idx = []
     for j in range(len(scene_types)):

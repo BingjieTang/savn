@@ -103,7 +103,6 @@ class ExhaustiveBFSController(Controller):
         local_executable_path=None,
         actions=["MoveAhead", "RotateLeft", "RotateRight", "LookUp", "LookDown"],
     ):
-
         super(ExhaustiveBFSController, self).__init__()
         # Allowed rotations.
         self.rotations = [0, 45, 90, 135, 180, 225, 270, 315]

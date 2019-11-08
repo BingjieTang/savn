@@ -28,7 +28,7 @@ class Environment:
             fov=fov,
             offline_data_dir=offline_data_dir,
             images_file_name=images_file_name,
-            visualize=False,
+            visualize=True,
             local_executable_path=local_executable_path,
         )
         self.grid_size = grid_size
