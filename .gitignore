@@ -1,0 +1,6 @@
+pretrained_models.tar.gz
+data.tar.gz
+pretrained_models
+data
+*.pyc
+*.json
