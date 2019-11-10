@@ -17,7 +17,7 @@ from utils.class_finder import model_class, agent_class, optimizer_class
 from utils.net_util import ScalarMeanTracker
 from main_eval import main_eval
 
-from runners import nonadaptivea3c_train, nonadaptivea3c_val, savn_train, savn_val
+from runners import nonadaptivea3c_train, nonadaptivea3c_val, savn_train, savn_val, newsavn_train, newsavn_val
 
 
 os.environ["OMP_NUM_THREADS"] = "1"
@@ -31,6 +31,10 @@ def main():
         args.learned_loss = False
         args.num_steps = 50
         target = nonadaptivea3c_val if args.eval else nonadaptivea3c_train
+    elif args.model == "NEWSAVN":
+        args.learned_loss = True
+        args.num_steps = 6
+        target = newsavn_val if args.eval else newsavn_train
     else:
         args.learned_loss = True
         args.num_steps = 6

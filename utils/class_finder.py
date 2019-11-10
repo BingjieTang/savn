@@ -8,6 +8,8 @@ def model_class(class_name):
     if class_name not in models.__all__:
        raise argparse.ArgumentTypeError("Invalid model {}; choices: {}".format(
            class_name, models.__all__))
+    print(models)
+    print(class_name)
     return getattr(models, class_name)
 def agent_class(class_name):
     if class_name not in agents.__all__:
